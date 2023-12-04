@@ -1,0 +1,97 @@
+:root {
+	--mainText:black;
+	--secondaryText:#4b5156;
+}
+
+html, body {
+	padding: 0;
+	margin: 0;
+	scroll-behavior: smooth;
+}
+
+body * {
+    transition: 0.3s;	
+}
+
+h1, h2, h3, h4, h5, h6, strong {
+	color: var(--mainText);
+	font-family: 'Russo One', sans-serif;
+	font-weight: 500;
+}
+
+p, li, span, label, input, textarea {
+	color: var(--secondaryText);
+	font-family: 'Roboto Mono', monospace;
+}
+
+a {
+	text-decoration: none;
+	color:#17a2b8;
+}
+
+h1 { font-size: 56px;}
+h2 { font-size: 36px;}
+
+/* Home Page */
+
+.main {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 75px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blog__heading {
+	display: block;
+	font-family: Amatic SC;
+	background-color: rgba(236, 225, 193, 0.75);
+}
+
+.portfolio h2 {
+	font-family: Amatic SC;
+	display: block;
+}
+
+.divider-straight {
+	background-color: rgba(0, 0, 0, 0.2);
+    width: 1px;
+    height: 120px;
+}
+
+.divider-angled {
+	position: absolute;
+	height: 100%;
+	width: 1px;
+	background-color: rgba(0, 0, 0, 0.2);
+	left: 41%;
+	top: 72%;
+	transform: rotate(60deg);
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 800px) {
+	.divider-straight {
+		width: 200px;
+		height: 1px;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.main {
+		flex-direction: row;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.divider-angled {
+		display: none;
+	}
+}
