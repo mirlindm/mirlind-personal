@@ -55,6 +55,11 @@ h2 { font-size: 36px;}
 	width: 200px;
 }
 
+.portfolio {
+	display: flex;
+	flex-direction: column;
+}
+
 .portfolio h2 {
 	font-family: Amatic SC;
 	display: block;
@@ -71,8 +76,16 @@ h2 { font-size: 36px;}
 @media screen and (max-width: 800px) {
 	.divider-straight {
 		width: 200px;
-		height: 1px;
+		height: 1px;		 
 	}
+
+	.portfolio__heading {
+        order: 2;
+    }
+
+    .portfolio__link {
+        order: 1;
+    }
 }
 
 @media screen and (min-width: 800px) {
